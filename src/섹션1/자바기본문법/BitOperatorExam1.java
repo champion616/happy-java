@@ -1,3 +1,5 @@
+package 섹션1.자바기본문법;
+
 public class BitOperatorExam1 {
     public static void main(String[] args) {
         int a = 4;

@@ -1,3 +1,5 @@
+package 섹션1.자바기본문법;
+
 public class Gugudan1 {
     public static void main(String[] args){
         for(int i=1; i<=9; i++){
