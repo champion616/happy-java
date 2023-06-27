@@ -1,5 +1,15 @@
 package 섹션3.객체지향문법2;
 
+/**
+ * JavaDoc 주석문
+ *
+ * 책 한 권의 정보를 담기 위한 클래스
+ * @author
+ * @since
+ * @version 0.1
+ */
+
+
 public class Book {
     private String title;
     private int price; // field price
