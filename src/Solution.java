@@ -4,39 +4,35 @@ import java.util.ArrayList;
 class Solution {
 
     public static void main(String[] args) {
-        int[] arr = {1, 4, 2, 5, 3};
         Solution s = new Solution();
-        int[] result = s.solution(arr);
+        int[] result = s.solution(10);
 
         for(int i : result){
             System.out.println(i);
         }
     }
 
-    public int[] solution(int[] arr) {
-        int[] stk = {};
+    public int[] solution(int n) {
+        int[] answer = {};
 
         List<Integer> list = new ArrayList<>();
+        list.add(n);
 
-        int i = 0;
-        for(int j=0; i<arr.length; j++){
-            int size = list.size();
-            if(size == 0){
-                list.add(arr[i]);
-                i++;
-            }else if((size>=1) && (list.get(size-1).intValue()<arr[i])){
-                list.add(arr[i]);
-                i++;
-            }else if((size>=1) && (list.get(size-1).intValue()>=arr[i])){
-                list.remove(size-1);
+        while(list.get(list.size()-1) != 1){
+            int num = list.get(list.size()-1);
+
+            if(num % 2 == 0){
+                list.add(num/2);
+            }else{
+                list.add(3*num+1);
             }
         }
 
-        stk = new int[list.size()];
-        for(int j=0; i<list.size(); j++){
-            stk[j] = list.get(j).intValue();
+        answer = new int[list.size()];
+        for(int i=0; i<list.size(); i++){
+            answer[i] = list.get(i);
         }
 
-        return stk;
+        return answer;
     }
 }
